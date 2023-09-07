@@ -38,6 +38,10 @@ npm run inserir
 crtl + c  para encerrar nodemon
 ```
 Ou pode inserilos no db manualmente com cadigo a seguir
+
+```
+npm run dev
+```
 ```
 
 INSERT INTO products VALUES (16,'AZEITE  PORTUGUES  EXTRA VIRGEM GALLO 500ML',18.44,20.49);
