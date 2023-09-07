@@ -5,7 +5,7 @@ export type resolveNewPrice = {
     new_price: string
     success: boolean
     problems: string[]
-    pack:resolvePack[]
+    packs:resolvePack[]
 }
 export type rawFileExpected = {
     product_code: string

@@ -17,10 +17,10 @@ const Home = () => {
         <FormUpdatePrice returnList={listResolveResponse} />
 
         {Array.isArray(list) ? (
-          <ListResolve list={list} />
+          <ListResolve list={list} setList={setList} />
         ) : (
           <div>
-            <h2>{list.error}</h2>
+            <h2 className={`p-3 my-3 bg-red-100 border border-red-500 rounded-md`}>Erro: {list.error}</h2>
           </div>
         )}
       </section>

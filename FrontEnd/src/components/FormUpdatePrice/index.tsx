@@ -23,7 +23,8 @@ const FormUpdatePrice = ({ returnList }: props) => {
   };
   return (
     <>
-      <fieldset className={`border w-full border-gray-700 p-6`}>
+   
+      <fieldset className={`bg-slate-50 shadow-md rounded-md border w-full border-gray-700 p-6`}>
         <legend className={`text-xl bold mx-5`}>Atualização de preços</legend>
         <p>Carregue um arquivo .csv</p>
         <input ref={fileRef} type="file" name="file" />

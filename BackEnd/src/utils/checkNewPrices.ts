@@ -10,7 +10,7 @@ export const checkNewPrices = async (product_checked: resolveNewPrice): Promise<
         new_price: '',
         success: false,
         problems: [],
-        pack: []
+        packs: []
     }
 
     if (!('product_code' in product_checked && 'new_price' in product_checked)) {
@@ -76,7 +76,7 @@ export const checkNewPrices = async (product_checked: resolveNewPrice): Promise<
                     new_price: newpackPrice
                 }
 
-                product.pack = [...product.pack, tempPack]
+                product.packs = [...product.packs, tempPack]
             }
         }
 

@@ -1,4 +1,5 @@
 import axios, { AxiosError } from "axios"
+import { resolveNewPrice } from "../types";
 
 let url = 'http://localhost:3000/'
 
@@ -13,7 +14,23 @@ export const updatePriceByCsv = async (formData: FormData) => {
                 'Content-Type': 'multipart/form-data'
             }
         });
-        console.log(response.data)
+       
+        return response.data;
+
+    } catch (error: AxiosError | any) {
+        console.error('Erro na solicitação:', error);
+        return error.response.data;
+
+    }
+}
+export const updatePriceApi = async (list:resolveNewPrice[]) => {
+    try {
+      
+        const response = await api.post('update-price', list, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
         return response.data;
 
     } catch (error: AxiosError | any) {
