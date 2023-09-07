@@ -5,7 +5,6 @@ CREATE TABLE `products` (
     `cost_price` DECIMAL(9, 2) NOT NULL,
     `sales_price` DECIMAL(9, 2) NOT NULL,
 
-    UNIQUE INDEX `products_code_key`(`code`),
     PRIMARY KEY (`code`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -16,7 +15,6 @@ CREATE TABLE `packs` (
     `product_id` BIGINT NOT NULL,
     `qty` BIGINT NOT NULL,
 
-    UNIQUE INDEX `packs_id_key`(`id`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 

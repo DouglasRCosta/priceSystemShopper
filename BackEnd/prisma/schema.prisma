@@ -10,20 +10,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model products {
-  code        BigInt  @id @unique
-  name        String  @db.VarChar(100)
-  cost_price  Decimal @db.Decimal(9, 2)
-  sales_price Decimal @db.Decimal(9, 2)
-  packs       packs[] @relation("productPack")
-  pack_item   packs[] @relation("productItem")
-}
+  model products {
+    code        BigInt  @id
+    name        String  @db.VarChar(100)
+    cost_price  Decimal @db.Decimal(9, 2)
+    sales_price Decimal @db.Decimal(9, 2)
+    packs       packs[] @relation("productPack")
+    pack_item   packs[] @relation("productItem")
+  }
 
-model packs {
-  id           BigInt   @id @unique @default(autoincrement())
-  product_pack products @relation("productPack", fields: [pack_id], references: [code])
-  pack_id      BigInt
-  product_item products @relation("productItem", fields: [product_id], references: [code])
-  product_id   BigInt
-  qty BigInt
-}
+  model packs {
+    id           BigInt   @id @default(autoincrement())
+    product_pack products @relation("productPack", fields: [pack_id], references: [code])
+    pack_id      BigInt
+    product_item products @relation("productItem", fields: [product_id], references: [code])
+    product_id   BigInt
+    qty          BigInt
+  }
