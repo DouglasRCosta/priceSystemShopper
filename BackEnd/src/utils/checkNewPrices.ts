@@ -25,7 +25,7 @@ export const checkNewPrices = async (product_checked: resolveNewPrice): Promise<
     // converte arredondando o preço para cima sempre com duas decimais caso venha com mais   
     let regexPrice = /^[0-9]{1,9}(?:\.[0-9]{0,2})?$/
     if (!regexPrice.test(product.new_price)) {
-        product.problems.push('Preço do produto deve possui até 9 unidades e dois decimais exemplo : 33.98')
+        product.problems.push('Preço do produto deve possui até 9 unidades e duas casas decimais exemplo : 33.98')
     } else {
         product.new_price = parseFloat(product_checked.new_price).toFixed(2)
     }

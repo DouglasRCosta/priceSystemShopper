@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { resolveNewPrice } from "../../types";
 import { updatePriceApi } from "../../utils/api";
 import ListItem from "../ListItem";
@@ -10,9 +11,12 @@ type props = {
 const ListResolve = ({ list, setList }: props) => {
   const updatePrice = async () => {
     let result = await updatePriceApi(list);
+ 
 
     if (result == true) {
+      alert('Atualização com sucesso !')
       setList([]);
+       
     }
   };
 

@@ -44,7 +44,7 @@ const ListItem = ({ item }: props) => {
             {item.packs.map((e, i) => (
               <li key={i}>
                 <p className={`text-blue-400`}>pack:</p>
-                <div className={`flex `}>
+                <div className={`flex-row md:flex `}>
                   <div className={`mr-3`}>Código: {e.code}</div>
                   <div className={`mr-3`}>Nome: {e.name}</div>
                   <div className={`mr-3`}>Preço Atual: {e.sales_price}</div>
