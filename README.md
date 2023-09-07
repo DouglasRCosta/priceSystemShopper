@@ -37,11 +37,11 @@ Na pasta BackEnd possui um scrip que adicionará os dados ao db
 npm run inserir
 crtl + c  para encerrar nodemon
 ```
-Ou pode inserilos no db manualmente com cadigo a seguir
-
 ```
 npm run dev
 ```
+Ou pode inserilos no db manualmente com cadigo a seguir
+
 ```
 
 INSERT INTO products VALUES (16,'AZEITE  PORTUGUES  EXTRA VIRGEM GALLO 500ML',18.44,20.49);
